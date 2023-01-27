@@ -1,0 +1,118 @@
+{%extends 'base.html' %}
+
+{%block title%} Diya | Home {%endblock%}
+
+{%block content%}
+
+
+<div class="container-custom">
+
+
+    <!-- Set up your HTML -->
+    <div class="owl-carousel">
+
+
+        {% for cat in cats %}
+
+        <div class="card item" style="margin-left:30px; margin-top:35px;">
+
+            <div class="img-container" style="">
+
+                {% comment %} <img src="/media/{{cat.image}}" class="responsive-img" alt=""> {% endcomment %}
+                <img src="/media/{{cat.image}}" class="responsive-img" style="height: 35vh !important;" alt="">
+
+            </div>
+            <div class="card-content" style="background-color: #dfe8f0;">
+
+                <div class="card-title">
+                    {{cat.title}}
+                </div>
+
+                <p class="truncate">{{cat.description}}</p>
+                <div class="container center-align mt20">
+                    <a href="/category/{{cat.url}}" class="btn bg-primary">View More..</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        {%endfor%}
+
+    </div>
+
+
+</div>
+
+{% comment %} <div class="owl-nav">
+    <button type="button" role="presentation" class="owl-prev">
+        <span aria-label="Previous">‹</span>
+    </button>
+    <button type="button" role="presentation" class="owl-next disabled">
+        <span aria-label="Next">›</span>
+    </button>
+</div> {% endcomment %}
+
+
+<div class="container" style="margin: 3em 14em;">
+
+    <div class="row">
+
+        <div class="col s12 ">
+
+
+            {%for p in posts %}
+
+            <div class="row" style="text-align: inherit;margin-bottom: 0em;height: 23em;">
+
+                <div class="col s12 m9" style="padding: 2em;height: 23em;">
+
+                    <div style="padding: 1em;"><h5>{{p.title}}</h5>Category: {{p.cat}}</div>
+
+                    <div style="padding: 1em;font-size:17px;">{{p.content |truncatewords:60 | safe}}
+
+                    </div>
+                    <div style="margin-left:1.4em;">
+                        <a href="/blog/{{p.url}}" class="btn  bg-primary ">Read More..</a>
+                    </div>
+                     </div>
+
+                    <div class="col s12 m3"style="padding-top: 5em;padding-bottom: 5em;height: 23em;width: 19em;">
+                    <img src="/media/{{p.image}}" class="responsive-img" style="height: 13em;width:18em">
+
+                </div>
+
+            </div>
+
+            {%endfor %}
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="container2">
+    <div class="items" id="item1">
+      <h3>487</h3>
+      <p>Total Members</p>
+    </div>
+    <div class="items" id="item2">
+      <h3>79</h3>
+      <p>Active Members</p>
+    </div>
+    <div class="items" id="item3">
+      <h3>7</h3>
+      <p>Diverse Countries</p>
+    </div>
+    <div class="items" id="item4">
+      <h3>13</h3>
+      <p>Our Mentors</p>
+    </div>
+  </div>
+
+{%endblock%}
+

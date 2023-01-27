@@ -1,0 +1,29 @@
+<ul id="dropdown1" class="dropdown-content">
+
+    {% for cat in cats %}
+
+    <li><a href="/category/{{cat.url}}">{{cat.title}}</a></li>
+
+    {% endfor %}
+</ul>
+
+<nav class="bg-primary"style="position: sticky;top: 0;z-index: 100;">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/home" class="brand-logo"style="font-size:55px;margin-left: -100px;">Diya</a>
+            <a href="/home" style="margin-left: 9px;">Enlight Yourself</a>
+            <ul class="right hide-on-med-and-down"style="margin-right: -100px;">
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/admin">ADMIN</a></li>
+                <li><a href="/category/trending">TRENDING</a></li>
+                <li><a href="/category/inspiration">INSPIRATION</a></li>
+
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">BLOGS<i
+                    class="material-icons right">arrow_drop_down</i></a>
+            </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+

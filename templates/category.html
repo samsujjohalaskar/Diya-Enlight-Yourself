@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+
+{%block title%} Welcome to Diya {%endblock%}
+
+{% comment %} {% include header.html %} {% endcomment %}
+
+{%block content%}
+
+<div class="container" style="height: 80vh;margin-top: 100px;">
+    <div class="row" style="height:50em">
+        <div class="col s12" style="width: 90em;">
+            <div class="col s12 m6">
+                <h3>{{cat.title}}</h3>
+                  <p>Related Posts:</p>
+                  <br>
+                 {%for p in posts %}
+                    <div>
+                     {% comment %} <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a> {% endcomment %}
+                      <a href="/blog/{{p.url}}">{{p.title}}</a>
+                      <hr>
+                    </div>    
+                {% empty %}
+                <h3>No posts in this category</h3>
+                {%endfor%}
+            </div>
+            <div class="col s12 m6">
+                {% comment %} <div class="img-container"> {% endcomment %}
+                  <img src="/media/{{cat.image}}" class="responsive-img" style="height: 40em;width: 100%;object-fit: cover;"alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{%endblock content%}
