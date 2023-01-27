@@ -14,3 +14,38 @@ margin:auto;
 body{
     background-color: #dfe8f0;
 }
+body {
+    background-color: #dfe8f0;
+  }
+
+  .container2 {
+    display: flex;
+    justify-content: space-evenly;
+    /* border: black solid; */
+    padding: 5em;
+  }
+  .items {
+    height: 7em;
+    width: 7em;
+    /* margin: 5em; */
+    /* background-color: aqua; */
+    text-align: center;
+    font-family: BhuTuka Expanded One;
+    font-size: 2em;
+  }
+
+  /* footer */
+
+  .footer {
+    height: 5em;
+    width: 100%;
+    /* border: 1px black solid; */
+    background-color: rgb(98, 182, 109);
+    align-items: center;
+    text-align: center;
+  }
+  .elements {
+    /* border: 1px solid black; */
+    display: inline-block;
+    margin-top: 2em;
+  }
